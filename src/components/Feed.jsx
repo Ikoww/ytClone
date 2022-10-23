@@ -42,7 +42,8 @@ useEffect(() => {
           variant='h4' 
           fontWeight='bold' 
           marginBottom={2}
-          marginLeft={3} 
+          marginLeft={3}
+          // textAlign='center' 
           sx={{color: 'white'}}
          >  
             

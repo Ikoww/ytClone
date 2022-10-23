@@ -14,7 +14,9 @@ function SearchBar() {
         border: '1px solid #e3e3e3', 
         paddingLeft: 2,
         boxShadow: 'none',
-        marginRight: { sm: 5}
+        marginRight: { sm: 5},
+        marginLeft: {xs: 1, sm: 5, md: 15},
+        
         }}
     >
             <input 
@@ -29,6 +31,7 @@ function SearchBar() {
              sx={{
                   padding: '10px',
                   color: 'red',
+                  marginLeft: 'auto'
              }}
             >
                 <Search />

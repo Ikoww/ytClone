@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import {Box, Typography, Card, CardContent, CardMedia} from '@mui/material';
 
 
-function ChannelCard( {channelDetail }) {
+function ChannelCard( {channelDetail, marginTop }) {
 
-  // console.log(snippet)
+  console.log('From: ChannelCard')
   // console.log(channelId)
   return (
     <Box sx={{
@@ -18,10 +18,11 @@ function ChannelCard( {channelDetail }) {
       alignItems: 'center',
       width: {sx: '350px', md: '320px'},
       height: '326px',
-      margin: 'auto'
+      margin: 'auto',
+      marginTop,
     }}>
 
-      <Link to={channelDetail?.snippet?.channelId? `channel/${channelDetail?.snippet?.channelId}` : demoChannelUrl}>
+      <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -40,7 +41,7 @@ function ChannelCard( {channelDetail }) {
              border: '1px solid #e3e3e3'}} 
            />
            <Typography variant='h6'>
-            {channelDetail?.snippet.channelTitle || demoChannelTitle}
+            {channelDetail?.snippet?.title|| demoChannelTitle}
             <CheckCircle sx={{fontSize: 12, color: 'gray' ,marginLeft: '5px'}} />
             </Typography>
 

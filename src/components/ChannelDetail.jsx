@@ -10,8 +10,9 @@ function ChannelDetail() {
   const [videos, setVideos] = useState([])
   const { id } = useParams();
   
-  // console.log(channel);
-  console.log(videos);
+  console.log('From: ChannelDetail')
+
+
 
   useEffect(() => {
    fetchData(`channels?part=snippet&id=${id}`)
@@ -23,8 +24,24 @@ function ChannelDetail() {
 
 
   return (
-    <div>{id}</div>
+    <Box minHeight='95vh'>
+      <Box>
+
+      <div style={{
+        background: 'linear-gradient(90deg, rgba(180,9,9,1) 0%, rgba(48,135,214,1) 50%, rgba(69,252,166,1) 100%)',
+        zIndex: 10,
+        height: '300px',
+      }}/>
+        
+      
+        <ChannelCard channelDetail={channel} marginTop='-95px' />
+    </Box>
+    <Box display="flex" padding= '2'>
+      <Box sx={{mr: { sm: '100px'}}} />
+      <Videos videos={videos} />
+      </Box>
+    </Box>
   )
 }
 
-export default ChannelDetail
+export default ChannelDetail;

@@ -3,16 +3,18 @@ import { Box, Stack, } from '@mui/material'
 
 import {VideoCard, ChannelCard} from './';
 
-function Videos( {videos }) {
+function Videos( {videos, direction }) {
 
   
 
   return (
     <Stack 
-     direction='row'
+     direction={direction || 'row'}
      flexWrap='wrap'
      justifyContent='start'
-     gap={2}>
+     gap={2}
+    //  marginLeft='20px'
+     >
 
         {videos?.map((video, i) => (
             <Box key={i}>
